@@ -1,6 +1,12 @@
 import TopComponent from "../Components/TopComponent";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router";
 const Home=()=>{
+    const navigate= useNavigate();
+    const handleFamilyPlanning=()=>{
+        navigate('/planning');
+
+    }
     return (
         <div> 
             <TopComponent/>
@@ -21,10 +27,10 @@ const Home=()=>{
             <div className="mt-10">
                 <p className="text-2xl font-semibold">Resources on</p>
                 <div className="grid grid-cols-2 gap-6 place-items-center mt-6">
-                    <div className="bg-lightpurple h-24 w-40 rounded-lg text-center flex items-center place-content-center"><p >Family Planning</p></div>
-                    <div className="bg-lightpurple h-24 w-40 rounded-lg text-center flex items-center place-content-center"><p>Menustration</p> </div>
-                    <div className="bg-lightpurple h-24 w-40 rounded-lg text-center flex items-center place-content-center"><p> Pre and post natal Care</p> </div>
-                    <div className="bg-lightpurple h-24 w-40 rounded-lg text-center flex items-center place-content-center"><p>Breast Cancer</p> </div>
+                    <div className="bg-lightpurple h-24 w-40 rounded-lg text-center flex items-center place-content-center cursor-pointer" onClick={handleFamilyPlanning}><p >Family Planning</p></div>
+                    <div className="bg-lightpurple h-24 w-40 rounded-lg text-center flex items-center place-content-center cursor-pointer"><p>Menustration</p> </div>
+                    <div className="bg-lightpurple h-24 w-40 rounded-lg text-center flex items-center place-content-center cursor-pointer"><p> Pre and post natal Care</p> </div>
+                    <div className="bg-lightpurple h-24 w-40 rounded-lg text-center flex items-center place-content-center cursor-pointer"><p>Breast Cancer</p> </div>
                 </div>
             </div>
 
